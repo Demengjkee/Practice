@@ -7,21 +7,21 @@ import java.util.*;
  */
 public class Methods {
     public static int compare(Juice o1, Juice o2) {
-        ArrayList<String> juiceBigger = (o1.getComponents().size() >= o2.getComponents().size()?
+        ArrayList<String> juiceBigger = (o1.getComponents().size() >= o2.getComponents().size() ?
                 o1.getComponents() : o2.getComponents());
-        ArrayList<String> juiceSmaller = (o1.getComponents().size() < o2.getComponents().size()?
+        ArrayList<String> juiceSmaller = (o1.getComponents().size() < o2.getComponents().size() ?
                 o1.getComponents() : o2.getComponents());
-        ArrayList<String> smallCpy = (ArrayList<String>)juiceSmaller.clone();
-        ArrayList<String> bigCpy = (ArrayList<String>)juiceBigger.clone();
+        ArrayList<String> smallCpy = (ArrayList<String>) juiceSmaller.clone();
+        ArrayList<String> bigCpy = (ArrayList<String>) juiceBigger.clone();
         int initSize = bigCpy.size();
-        if(bigCpy.removeAll(smallCpy) && initSize - smallCpy.size() == bigCpy.size())
+        if (bigCpy.removeAll(smallCpy) && initSize - smallCpy.size() == bigCpy.size())
             return 1;
         return 0;
     }
 
-    public static Stack<Juice> getStack(ArrayList<Juice> juices){
+    public static Stack<Juice> getStack(ArrayList<Juice> juices) {
         Stack<Juice> result = new Stack<Juice>();
-        while(juices.size() > 0){
+        while (juices.size() > 0) {
             result.add(juices.get(0));
             juices.remove(0);
             for (int i = 1; i < juices.size(); i++) {
@@ -39,11 +39,11 @@ public class Methods {
 
     }
 
-    public static ArrayList<String> getComponents(ArrayList<Juice> juices){
+    public static ArrayList<String> getComponents(ArrayList<Juice> juices) {
         ArrayList<String> result = new ArrayList<String>();
-        for (Juice x : juices){
-            for (String y : x.getComponents()){
-                if(!result.contains(y)){
+        for (Juice x : juices) {
+            for (String y : x.getComponents()) {
+                if (!result.contains(y)) {
                     result.add(y);
                 }
 

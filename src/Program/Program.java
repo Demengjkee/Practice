@@ -9,7 +9,7 @@ import java.util.*;
  * Created by demeng on 15.02.15.
  */
 public class Program {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         File f = new File("input.txt");
         Scanner sc = new Scanner(f);
         final ArrayList<Juice> juices = new ArrayList<Juice>();
@@ -24,14 +24,14 @@ public class Program {
                 return o1.getComponentsNumber() - o2.getComponentsNumber();
             }
         });
-        ArrayList<Juice> juicesTmp = (ArrayList<Juice>)juices.clone();
+        ArrayList<Juice> juicesTmp = (ArrayList<Juice>) juices.clone();
         Stack<Juice> juiceStack = Methods.getStack(juices);
 
         int cleanings = 1;
 
         Juice[] juiceSortArray = new Juice[juiceStack.size()];
         juiceStack.copyInto(juiceSortArray);
-        for (int i = 0; i < juiceSortArray.length - 1;i++){
+        for (int i = 0; i < juiceSortArray.length - 1; i++) {
             Juice prev = juiceSortArray[i];
             Juice next = juiceSortArray[i + 1];
             if (prev.getComponentsNumber() >= next.getComponentsNumber()) {
@@ -42,7 +42,7 @@ public class Program {
         ArrayList<String> components = Methods.getComponents(juicesTmp);
         File f1 = new File("juice1.out");
         PrintStream ps1 = new PrintStream(f1);
-        for (String x : components){
+        for (String x : components) {
             ps1.println(x);
             ps1.flush();
         }
@@ -50,7 +50,7 @@ public class Program {
         Collections.sort(components);
         File f2 = new File("juice2.out");
         PrintStream ps2 = new PrintStream(f2);
-        for (String x : components){
+        for (String x : components) {
             ps2.println(x);
             ps2.flush();
         }
