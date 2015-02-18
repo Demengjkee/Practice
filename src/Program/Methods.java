@@ -38,4 +38,17 @@ public class Methods {
         return result;
 
     }
+
+    public static ArrayList<String> getComponents(ArrayList<Juice> juices){
+        ArrayList<String> result = new ArrayList<String>();
+        for (Juice x : juices){
+            for (String y : x.getComponents()){
+                if(!result.contains(y)){
+                    result.add(y);
+                }
+
+            }
+        }
+        return result;
+    }
 }
