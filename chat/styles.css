@@ -1,0 +1,78 @@
+.chat{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+}
+.mainWindow{
+    border-right: solid 2px gray;
+    position: relative;
+    width: 70%;
+    top: 0px;
+    height: 100%;
+    float: left;
+    bottom: 10px;
+}
+.usersOnline{
+    border-left: solid 2px gray;
+    left: -0px;
+    top: 0px;
+    position: relative;
+    width: 29%;
+    height: 100%;
+    float: left;
+    bottom: 10px;
+}
+.message{
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    width: 87%;
+}
+.sendButton{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    width: 10%;
+}
+
+.confirmNameButton{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    width: 20%;
+}
+.upperLineMain{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    font-family: cursive;
+    height: 1.2em;
+    border-bottom: solid 4px grey;
+}
+.upperLineUsers{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150%;
+    font-family: cursive;
+    height: 1.2em;
+    border-bottom: solid 4px grey;
+}
+.usernameLine{
+
+    position: absolute;
+    left: 2%;
+    bottom: 1%;
+    width: 100%;
+
+}
+.username{
+    /*position: absolute;
+    left: 2%;
+    bottom: 1%;*/
+    width: 75%;
+}
