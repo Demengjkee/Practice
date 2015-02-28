@@ -1,19 +1,15 @@
-package Program;
+package program;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by demeng on 15.02.15.
  */
 public class Juice {
-    private ArrayList<String> components;
+    private List<String> components;
     private int componentsNumber;
-
-    public Juice(ArrayList<String> components, int componentsNumber) {
-        this.components = components;
-        this.componentsNumber = componentsNumber;
-    }
 
     public Juice(String name) {
         String[] components = name.split(" ");
@@ -21,7 +17,7 @@ public class Juice {
         this.componentsNumber = this.components.size();
     }
 
-    public ArrayList<String> getComponents() {
+    public List<String> getComponents() {
         return components;
     }
 
