@@ -9,12 +9,12 @@ import java.util.List;
  */
 public class Juice {
     private List<String> components;
-    private int componentsNumber;
+
 
     public Juice(String name) {
         String[] components = name.split(" ");
-        this.components = new ArrayList<String>(Arrays.asList(components));
-        this.componentsNumber = this.components.size();
+        this.components = (Arrays.asList(components));
+
     }
 
     public List<String> getComponents() {
@@ -22,7 +22,7 @@ public class Juice {
     }
 
     public int getComponentsNumber() {
-        return componentsNumber;
+        return this.components.size();
     }
 
 
